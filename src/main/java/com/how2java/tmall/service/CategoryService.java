@@ -10,9 +10,17 @@ public interface CategoryService {
 
     List<Category> list2();
 
-    int total();
+//    int total();
+//
+//    List<Category> list(Page page);
 
-    List<Category> list(Page page);
+    List<Category> list();
 
     void add(Category category);
+    //新增删除方法
+    void delete(int id);
+
+    Category get(int id);
+
+    void update(Category category);
 }

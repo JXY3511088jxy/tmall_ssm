@@ -7,17 +7,33 @@
     <select id="list1" resultType="Category">
     select * from category order by id desc
   </select>
+    <!--<select id="list" resultType="Category">-->
+        <!--select * from   category         order by id desc-->
+        <!--<if test="start!=null and count!=null">-->
+            <!--limit #{start},#{count}-->
+        <!--</if>-->
+
+    <!--</select>-->
+    <!--<select id="total" resultType="int">-->
+        <!--select count(*) from category-->
+    <!--</select>-->
     <select id="list" resultType="Category">
         select * from   category         order by id desc
-        <if test="start!=null and count!=null">
-            limit #{start},#{count}
-        </if>
-
     </select>
-    <select id="total" resultType="int">
-        select count(*) from category
-    </select>
+    <!--这下面的每个字段的含义弄清楚一下-->
     <insert id="add"  keyProperty="id"  useGeneratedKeys="true" parameterType="Category" >
         insert into category ( name ) values (#{name})
     </insert>
+
+    <delete id="delete">
+        delete from category where id= #{id}
+    </delete>
+
+    <select id="get" resultType="Category">
+        select * from category  where id= #{id}
+    </select>
+
+    <update id="update" parameterType="Category" >
+        update category set name=#{name} where id=#{id}
+    </update>
 </mapper>

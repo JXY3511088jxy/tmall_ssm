@@ -9,9 +9,17 @@ public interface CategoryMapper {
 
     List<Category> list1();
 
-    public List<Category> list(Page page);
+//    public List<Category> list(Page page);
+//
+//    public int total();
 
-    public int total();
+    List<Category> list();
 
     void add(Category category);
+
+    void delete(int id);
+
+    Category get(int id);
+
+    void update(Category category);
 }
