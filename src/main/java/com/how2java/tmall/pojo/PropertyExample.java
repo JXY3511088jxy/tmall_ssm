@@ -1,17 +1,16 @@
-package com.how2java.tmall.po;
+package com.how2java.tmall.pojo;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class CategoryExample {
+public class PropertyExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public CategoryExample() {
+    public PropertyExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -105,63 +104,123 @@ public class CategoryExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andCategory_idIsNull() {
-            addCriterion("category_id is null");
+        public Criteria andIdIsNull() {
+            addCriterion("id is null");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idIsNotNull() {
-            addCriterion("category_id is not null");
+        public Criteria andIdIsNotNull() {
+            addCriterion("id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idEqualTo(Byte value) {
-            addCriterion("category_id =", value, "category_id");
+        public Criteria andIdEqualTo(Integer value) {
+            addCriterion("id =", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idNotEqualTo(Byte value) {
-            addCriterion("category_id <>", value, "category_id");
+        public Criteria andIdNotEqualTo(Integer value) {
+            addCriterion("id <>", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idGreaterThan(Byte value) {
-            addCriterion("category_id >", value, "category_id");
+        public Criteria andIdGreaterThan(Integer value) {
+            addCriterion("id >", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idGreaterThanOrEqualTo(Byte value) {
-            addCriterion("category_id >=", value, "category_id");
+        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("id >=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idLessThan(Byte value) {
-            addCriterion("category_id <", value, "category_id");
+        public Criteria andIdLessThan(Integer value) {
+            addCriterion("id <", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idLessThanOrEqualTo(Byte value) {
-            addCriterion("category_id <=", value, "category_id");
+        public Criteria andIdLessThanOrEqualTo(Integer value) {
+            addCriterion("id <=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idIn(List<Byte> values) {
-            addCriterion("category_id in", values, "category_id");
+        public Criteria andIdIn(List<Integer> values) {
+            addCriterion("id in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idNotIn(List<Byte> values) {
-            addCriterion("category_id not in", values, "category_id");
+        public Criteria andIdNotIn(List<Integer> values) {
+            addCriterion("id not in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idBetween(Byte value1, Byte value2) {
-            addCriterion("category_id between", value1, value2, "category_id");
+        public Criteria andIdBetween(Integer value1, Integer value2) {
+            addCriterion("id between", value1, value2, "id");
             return (Criteria) this;
         }
 
-        public Criteria andCategory_idNotBetween(Byte value1, Byte value2) {
-            addCriterion("category_id not between", value1, value2, "category_id");
+        public Criteria andIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("id not between", value1, value2, "id");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidIsNull() {
+            addCriterion("cid is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidIsNotNull() {
+            addCriterion("cid is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidEqualTo(Integer value) {
+            addCriterion("cid =", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidNotEqualTo(Integer value) {
+            addCriterion("cid <>", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidGreaterThan(Integer value) {
+            addCriterion("cid >", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidGreaterThanOrEqualTo(Integer value) {
+            addCriterion("cid >=", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidLessThan(Integer value) {
+            addCriterion("cid <", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidLessThanOrEqualTo(Integer value) {
+            addCriterion("cid <=", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidIn(List<Integer> values) {
+            addCriterion("cid in", values, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidNotIn(List<Integer> values) {
+            addCriterion("cid not in", values, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidBetween(Integer value1, Integer value2) {
+            addCriterion("cid between", value1, value2, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidNotBetween(Integer value1, Integer value2) {
+            addCriterion("cid not between", value1, value2, "cid");
             return (Criteria) this;
         }
 
@@ -232,66 +291,6 @@ public class CategoryExample {
 
         public Criteria andNameNotBetween(String value1, String value2) {
             addCriterion("name not between", value1, value2, "name");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateIsNull() {
-            addCriterion("last_update is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateIsNotNull() {
-            addCriterion("last_update is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateEqualTo(Date value) {
-            addCriterion("last_update =", value, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateNotEqualTo(Date value) {
-            addCriterion("last_update <>", value, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateGreaterThan(Date value) {
-            addCriterion("last_update >", value, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateGreaterThanOrEqualTo(Date value) {
-            addCriterion("last_update >=", value, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateLessThan(Date value) {
-            addCriterion("last_update <", value, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateLessThanOrEqualTo(Date value) {
-            addCriterion("last_update <=", value, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateIn(List<Date> values) {
-            addCriterion("last_update in", values, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateNotIn(List<Date> values) {
-            addCriterion("last_update not in", values, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateBetween(Date value1, Date value2) {
-            addCriterion("last_update between", value1, value2, "last_update");
-            return (Criteria) this;
-        }
-
-        public Criteria andLast_updateNotBetween(Date value1, Date value2) {
-            addCriterion("last_update not between", value1, value2, "last_update");
             return (Criteria) this;
         }
     }
