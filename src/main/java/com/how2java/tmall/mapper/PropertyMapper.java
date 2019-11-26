@@ -5,17 +5,18 @@ import com.how2java.tmall.pojo.PropertyExample;
 import java.util.List;
 
 public interface PropertyMapper {
-    int deleteByPrimaryKey(Integer id);
 
-    int insert(Property record);
+    void deleteByPrimaryKey(Integer id);
 
-    int insertSelective(Property record);
+    void insert(Property record);
+
+    void insertSelective(Property record);
 
     List<Property> selectByExample(PropertyExample example);
 
     Property selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(Property record);
+    void updateByPrimaryKeySelective(Property record);
 
-    int updateByPrimaryKey(Property record);
+    void updateByPrimaryKey(Property record);
 }
