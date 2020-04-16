@@ -1,6 +1,16 @@
+/**
+* 模仿天猫整站ssm 教程 为how2j.cn 版权所有
+* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
+* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
+*/	
+
 package com.how2java.tmall.pojo;
 
+import com.how2java.tmall.service.OrderService;
+
 import java.util.Date;
+import java.util.List;
+
 
 public class Order {
     private Integer id;
@@ -28,6 +38,16 @@ public class Order {
     private Integer uid;
 
     private String status;
+
+
+    /*如下是非数据库字段*/
+    private List<OrderItem> orderItems;
+
+    private User user;
+
+    private float total;
+
+    private int totalNumber;
 
     public Integer getId() {
         return id;
@@ -132,4 +152,75 @@ public class Order {
     public void setStatus(String status) {
         this.status = status == null ? null : status.trim();
     }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
+    
+    
+    public static void main(String args[]){
+        Order o  = new Order();
+        o.setStatus(OrderService.delete);
+        System.out.println(o.getStatusDesc());
+    }
+    public String getStatusDesc(){
+        String desc ="未知";
+        switch(status){
+            case OrderService.waitPay:
+                desc="待付款";
+                break;
+            case OrderService.waitDelivery:
+                desc="待发货";
+                break;
+            case OrderService.waitConfirm:
+                desc="待收货";
+                break;
+            case OrderService.waitReview:
+                desc="等评价";
+                break;
+            case OrderService.finish:
+                desc="完成";
+                break;
+            case OrderService.delete:
+                desc="刪除";
+                break;
+            default:
+                desc="未知";
+        }
+        return desc;
+    }
+
+
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
+
+    public int getTotalNumber() {
+        return totalNumber;
+    }
+
+    public void setTotalNumber(int totalNumber) {
+        this.totalNumber = totalNumber;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
+/**
+* 模仿天猫整站ssm 教程 为how2j.cn 版权所有
+* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
+* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
+*/	

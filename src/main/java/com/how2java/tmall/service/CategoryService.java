@@ -1,24 +1,27 @@
+/**
+* 模仿天猫整站ssm 教程 为how2j.cn 版权所有
+* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
+* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
+*/	
+
 package com.how2java.tmall.service;
 
 import com.how2java.tmall.pojo.Category;
-import com.how2java.tmall.pojo.CategoryExample;
-
 import java.util.List;
 
+public interface CategoryService{
+    List<Category> list();
 
-public interface CategoryService {
+    void add(Category category);
 
-    void deleteByPrimaryKey(Integer id);
+    void delete(int id);
 
-    void insert(Category record);
+    Category get(int id);
 
-    void insertSelective(Category record);
-
-    List<Category> selectByExample(CategoryExample example);
-
-    Category selectByPrimaryKey(Integer id);
-
-    void updateByPrimaryKeySelective(Category record);
-
-    void updateByPrimaryKey(Category record);
+    void update(Category category);
 }
+/**
+* 模仿天猫整站ssm 教程 为how2j.cn 版权所有
+* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
+* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
+*/	

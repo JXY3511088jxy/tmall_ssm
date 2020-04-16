@@ -1,3 +1,9 @@
+/**
+* 模仿天猫整站ssm 教程 为how2j.cn 版权所有
+* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
+* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
+*/	
+
 package com.how2java.tmall.service.impl;
 
 import com.how2java.tmall.mapper.CategoryMapper;
@@ -14,39 +20,35 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     CategoryMapper categoryMapper;
 
-
     @Override
-    public void deleteByPrimaryKey(Integer id) {
-        categoryMapper.deleteByPrimaryKey(id);
-    }
-
-    @Override
-    public void insert(Category record) {
-        categoryMapper.insert(record);
-    }
-
-    @Override
-    public void insertSelective(Category record) {
-        categoryMapper.insertSelective(record);
-    }
-
-    @Override
-    public List<Category> selectByExample(CategoryExample example) {
+    public List<Category> list() {
+        CategoryExample example =new CategoryExample();
+        example.setOrderByClause("id desc");
         return categoryMapper.selectByExample(example);
     }
 
     @Override
-    public Category selectByPrimaryKey(Integer id) {
+    public void add(Category category) {
+        categoryMapper.insert(category);
+    }
+
+    @Override
+    public void delete(int id) {
+        categoryMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public Category get(int id) {
         return categoryMapper.selectByPrimaryKey(id);
     }
 
     @Override
-    public void updateByPrimaryKeySelective(Category record) {
-        categoryMapper.updateByPrimaryKeySelective(record);
-    }
-
-    @Override
-    public void updateByPrimaryKey(Category record) {
-        categoryMapper.updateByPrimaryKey(record);
+    public void update(Category category) {
+        categoryMapper.updateByPrimaryKeySelective(category);
     }
 }
+/**
+* 模仿天猫整站ssm 教程 为how2j.cn 版权所有
+* 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关
+* 供购买者学习，请勿私自传播，否则自行承担相关法律责任
+*/	
